@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         nav.classList.toggle('show');
     });
     
+    
     // Update copyright year
     document.getElementById('year').textContent = new Date().getFullYear();
     
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
+            
             
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
@@ -24,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
+                
                 
                 // Close mobile menu if open
                 if (nav.classList.contains('show')) {
