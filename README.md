@@ -7,12 +7,14 @@ It serves as both my **portfolio** and a space to share my journey in tech.
 ---
 
 ## 🚀 Live Demo
+
 You can view the live website here:  
 👉 [[HERE WE GO ](https://jean-regis-m.github.io/RegisMukiza.github.io/index.html))
 
 ---
 
 ## 🧠 Features
+
 - Responsive design (works on all devices)
 - Interactive and user-friendly interface
 - Projects and achievements section
@@ -22,6 +24,7 @@ You can view the live website here:
 ---
 
 ## 🛠️ Built With
+
 - **HTML5** – Structure of the website  
 - **CSS3** – Styling and animations  
 - **JavaScript** – Dynamic behavior  
