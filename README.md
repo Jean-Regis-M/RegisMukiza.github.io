@@ -1,7 +1,7 @@
 # 🌐 Personal Portfolio Website
 
 Welcome to my personal website!  
-This site showcases my **projects**, **skills**, and **experience** as a Digital forensics engineer.  
+This site showcases my **projects**, **skills**, and **experience** as a Digital forensics and Cybersecurity engineer.  
 It serves as both my **portfolio** and a space to share my journey in tech.
 
 ---
