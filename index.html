@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Regis MUKIZA | Digital Forensics Engineer</title>
-        <!-- This links to your main stylesheet -->
+        <!-- This links to my main stylesheet -->
         <link rel="stylesheet" href="style.css">
         <script src="main.js"></script>
         <!-- This links to Font Awesome for icons -->
@@ -13,7 +13,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jean-Regis-M • Cybersecurity & Digital Forensics Portfolio</title>
+<title>Jean Francois Regis MUKIZA • Cybersecurity & Digital Forensics Portfolio</title>
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@
     }
 
     body {
-        background: radial-gradient(circle at top, #181b3a 0, #050509 45%, #020206 100%);
+        background: radial-gradient(circle at top, #181b3a 0, #050506 45%, #020208 100%);
         color: #f5f5f5;
         min-height: 100vh;
         overflow-x: hidden;
@@ -718,14 +718,14 @@
 <section id="about" class="reveal">
     <div class="section-title">
         <h2>About Me</h2>
-        <p>Cybersecurity & Digital Forensics • Türkiye | Rwanda</p>
+        <p>Cybersecurity & Digital Forensics </p>
     </div>
     <p style="max-width:840px; margin:0 auto 20px; text-align:center; font-size:0.93rem; color:#d0d0d0;">
-        I am an undergraduate student in Computer Forensics / Cybersecurity, focused on building practical
+        I am an undergraduate student in Computer Forensics Engineering and Cybersecurity, focused on building practical
         tools that solve real problems: password security, phishing awareness, digital evidence workflows, and
         AI-supported forensics models. I enjoy designing clean architectures, writing research papers,
         and turning theory into working prototypes. My long-term vision is to contribute to digital safety
-        in both Rwanda and Türkiye through education, tools, and research.
+        in World's tech industry through education, tools, and research.
     </p>
 </section>
 
@@ -906,45 +906,42 @@
     </div>
 </section>
 
-<!-- ================= MINI GAME ================= -->
+<!-- ================= SIMPLE CTF CHALLENGE ================= -->
 <section id="game" class="reveal">
     <div class="section-title">
-        <h2>Cyber Shield Mini-Game ⚡</h2>
-        <p>Catch as many shields as you can in 20 seconds!</p>
+        <h2>Cyber CTF Challenge 🛡️</h2>
+        <p>Solve the challenge below. You have 3 attempts!</p>
     </div>
 
-    <div id="game-area"
-        style="
-            width: 100%;
-            max-width: 500px;
-            height: 350px;
-            margin: 0 auto;
-            background: rgba(15, 98, 254, 0.1);
-            border: 2px solid #0f62fe;
-            border-radius: 15px;
-            position: relative;
-            overflow: hidden;
-        ">
-        <div id="shield"
-            style="
-                width: 40px;
-                height: 40px;
-                background: #0f62fe;
-                border-radius: 50%;
-                position: absolute;
-                cursor: pointer;
-                transition: 0.1s;
-            ">
-        </div>
-    </div>
+    <div style="
+        max-width: 600px;
+        margin: 0 auto;
+        background: rgba(8, 10, 26, 0.9);
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid rgba(255,255,255,0.1);
+    ">
 
-    <div style="text-align: center; margin-top: 20px;">
-        <button class="btn-primary" onclick="startGame()">Start Game</button>
-        <p id="score-display" style="margin-top: 12px; font-size: 1rem; color: #b9c0ff;">
-            Score: 0 | Time: 20s
+        <p style="color:#b9c0ff; font-size:0.95rem; margin-bottom:12px;">
+            <strong>Challenge:</strong><br>
+            Decode this Base64 string and enter the correct flag format:<br><br>
+            <code style="color:#71a6ff; font-size:1rem;">UkVHSVN7Y3liZXJfc2VjdXJpdHlfY3RmX2ZsYWd9</code>
         </p>
+
+        <input id="ctfInput" type="text" placeholder="Enter flag (e.g. REGIS{...})"
+            style="
+                width:100%; padding:12px; border-radius:10px; border:none;
+                background:#0f1130; color:white; margin-top:10px;
+            " />
+
+        <button class="btn-primary" style="width:100%; margin-top:15px;" onclick="checkCTF()">
+            Submit Flag
+        </button>
+
+        <p id="ctfMessage" style="margin-top:15px; font-size:0.95rem;"></p>
     </div>
 </section>
+
 
 <!-- ================= BOOK A MEETING ================= -->
 <section id="booking" class="reveal">
@@ -1486,4 +1483,5 @@ emailBtnProtected.addEventListener("click", () => {
 </body>
 
 </html>
+
 
