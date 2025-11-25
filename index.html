@@ -8,7 +8,1374 @@
         <link rel="stylesheet" href="style.css">
         <script src="main.js"></script>
         <!-- This links to Font Awesome for icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jean-Regis-M • Cybersecurity & Digital Forensics Portfolio</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Optional Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: radial-gradient(circle at top, #181b3a 0, #050509 45%, #020206 100%);
+        color: #f5f5f5;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+        background: rgba(5, 5, 15, 0.85);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 10px 8%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+    }
+
+    .logo span {
+        color: #0f62fe;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        font-size: 0.9rem;
+    }
+
+    .nav-links a {
+        opacity: 0.8;
+        transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+        opacity: 1;
+        color: #0f62fe;
+    }
+
+    .btn-cv {
+        padding: 8px 16px;
+        border-radius: 999px;
+        border: 1px solid #0f62fe;
+        font-size: 0.85rem;
+        cursor: pointer;
+        background: transparent;
+        color: #f5f5f5;
+        transition: 0.25s;
+    }
+
+    .btn-cv:hover {
+        background: #0f62fe;
+        transform: translateY(-1px);
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+        padding: 120px 8% 70px;
+        display: grid;
+        grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.8fr);
+        gap: 40px;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+        content: "";
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(15, 98, 254, 0.25), transparent 70%);
+        z-index: -1;
+    }
+
+    .hero::before {
+        top: -80px;
+        left: -60px;
+    }
+
+    .hero::after {
+        bottom: -120px;
+        right: -80px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.6rem;
+        margin-bottom: 8px;
+    }
+
+    .hero-highlight {
+        color: #0f62fe;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 16px;
+        color: #cbd5ff;
+    }
+
+    .typing {
+        font-size: 1rem;
+        color: #9aa4ff;
+        height: 1.2rem;
+        margin-bottom: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid #9aa4ff;
+        animation: cursorBlink 0.9s infinite;
+    }
+
+    @keyframes cursorBlink {
+        0%, 50% { border-color: #9aa4ff; }
+        51%, 100% { border-color: transparent; }
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        max-width: 520px;
+        color: #d0d0d0;
+        margin-bottom: 24px;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .btn-primary {
+        padding: 10px 22px;
+        border-radius: 999px;
+        border: none;
+        cursor: pointer;
+        font-size: 0.9rem;
+        background: linear-gradient(135deg, #0f62fe, #29b3ff);
+        color: white;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: 0.2s;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-1px) scale(1.01);
+        box-shadow: 0 12px 25px rgba(15, 98, 254, 0.35);
+    }
+
+    .hero-secondary-link {
+        font-size: 0.85rem;
+        opacity: 0.85;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .hero-secondary-link i {
+        font-size: 0.8rem;
+    }
+
+    /* Parallax circles */
+
+    .parallax-circle {
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        opacity: 0.15;
+        pointer-events: none;
+    }
+
+    .circle-1 {
+        width: 160px;
+        height: 160px;
+        right: 10%;
+        top: 10%;
+    }
+
+    .circle-2 {
+        width: 90px;
+        height: 90px;
+        right: 20%;
+        bottom: 8%;
+    }
+
+    .circle-3 {
+        width: 120px;
+        height: 120px;
+        left: 5%;
+        bottom: -4%;
+    }
+
+    /* Terminal Box */
+
+    .terminal {
+        background: #06080f;
+        border-radius: 18px;
+        border: 1px solid #26293b;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.75);
+        padding-bottom: 18px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .terminal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 14px;
+        background: linear-gradient(90deg, #15182a, #101325);
+        border-bottom: 1px solid #26293b;
+        font-size: 0.8rem;
+        color: #9fa6c6;
+    }
+
+    .terminal-dots {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+    }
+
+    .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+    }
+
+    .dot.red { background: #ff5f57; }
+    .dot.yellow { background: #febc2e; }
+    .dot.green { background: #28c840; }
+
+    .terminal-body {
+        padding: 12px 16px 18px;
+        font-family: monospace;
+        font-size: 0.8rem;
+        line-height: 1.5;
+        color: #e5e7ff;
+        min-height: 200px;
+    }
+
+    .terminal-line {
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .prompt {
+        color: #29b3ff;
+    }
+
+    .terminal-cursor {
+        display: inline-block;
+        width: 7px;
+        background: #f5f5f5;
+        margin-left: 3px;
+        animation: cursorBlinkTerm 0.8s infinite;
+    }
+
+    @keyframes cursorBlinkTerm {
+        0%, 50% { opacity: 1; }
+        51%, 100% { opacity: 0; }
+    }
+
+    /* ================= GENERIC SECTIONS ================= */
+
+    section {
+        padding: 40px 8% 20px;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+        margin-bottom: 6px;
+    }
+
+    .section-title p {
+        font-size: 0.9rem;
+        color: #b9c0ff;
+    }
+
+    /* ================= SKILLS FLIP CARDS ================= */
+
+    .flip-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 22px;
+    }
+
+    .flip-card {
+        perspective: 1000px;
+    }
+
+    .flip-inner {
+        position: relative;
+        width: 100%;
+        height: 210px;
+        transition: transform 0.7s;
+        transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-front, .flip-back {
+        position: absolute;
+        inset: 0;
+        backface-visibility: hidden;
+        border-radius: 16px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .flip-front {
+        background: rgba(8, 10, 26, 0.9);
+        border: 1px solid rgba(151, 160, 255, 0.1);
+    }
+
+    .flip-back {
+        background: linear-gradient(135deg, #0f62fe, #29b3ff);
+        color: #f5f5f5;
+        transform: rotateY(180deg);
+    }
+
+    .flip-icon {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+        color: #0f62fe;
+    }
+
+    .flip-title {
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 1rem;
+    }
+
+    .flip-text {
+        font-size: 0.85rem;
+        color: #d0d3ff;
+    }
+
+    /* ================= PROJECT SLIDER ================= */
+
+    .slider-wrapper {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .slider {
+        overflow: hidden;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        background: rgba(10, 11, 25, 0.95);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    .slide {
+        min-width: 100%;
+        padding: 26px 22px;
+    }
+
+    .project-tag {
+        font-size: 0.7rem;
+        display: inline-block;
+        padding: 4px 9px;
+        border-radius: 999px;
+        background: rgba(15, 98, 254, 0.12);
+        color: #9fb9ff;
+        margin-bottom: 8px;
+    }
+
+    .slide h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+    .slide p {
+        font-size: 0.9rem;
+        color: #d0d0d0;
+        margin-bottom: 10px;
+    }
+
+    .project-meta {
+        font-size: 0.8rem;
+        color: #9fa6c6;
+        margin-bottom: 14px;
+    }
+
+    .slide a {
+        font-size: 0.88rem;
+        color: #4cb5ff;
+    }
+
+    .slider-controls {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .slider-btn {
+        border-radius: 999px;
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(10, 11, 25, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .slider-btn:hover {
+        border-color: #0f62fe;
+        transform: translateY(-1px);
+    }
+
+    .slider-indicators {
+        display: flex;
+        gap: 6px;
+        justify-content: center;
+        flex: 1;
+    }
+
+    .indicator-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: rgba(214, 218, 255, 0.3);
+        transition: 0.2s;
+    }
+
+    .indicator-dot.active {
+        background: #0f62fe;
+        transform: scale(1.2);
+    }
+
+    /* ================= RESEARCH SECTION ================= */
+
+    .research-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+    }
+
+    .research-card {
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 18px;
+        background: rgba(8, 10, 26, 0.9);
+    }
+
+    .research-label {
+        font-size: 0.75rem;
+        padding: 3px 8px;
+        border-radius: 999px;
+        background: rgba(79, 209, 197, 0.1);
+        color: #88f4e0;
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    .research-card h3 {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+
+    .research-card p {
+        font-size: 0.85rem;
+        color: #d0d0d0;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact-container {
+        max-width: 700px;
+        margin: 0 auto 40px;
+        background: rgba(8, 10, 26, 0.95);
+        border-radius: 18px;
+        padding: 22px 22px 26px;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .contact-row {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .contact-text {
+        font-size: 0.9rem;
+        color: #d0d0d0;
+        margin-bottom: 12px;
+    }
+
+    .contact-detail {
+        font-size: 0.88rem;
+        margin-bottom: 6px;
+    }
+
+    .contact-detail span {
+        color: #9fa6ff;
+        margin-right: 6px;
+    }
+
+    .contact-socials {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+
+    .contact-socials a {
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.2s;
+        opacity: 0.85;
+    }
+
+    .contact-socials a:hover {
+        border-color: #0f62fe;
+        opacity: 1;
+        transform: translateY(-1px);
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+        text-align: center;
+        padding: 18px 8% 26px;
+        font-size: 0.8rem;
+        color: #9fa6c6;
+        border-top: 1px solid rgba(255, 255, 255, 0.04);
+        margin-top: 40px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 850px) {
+        .hero {
+            grid-template-columns: 1fr;
+            padding-top: 100px;
+        }
+        .nav-links {
+            display: none; /* simple mobile version */
+        }
+        .contact-row {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-text h1 {
+            font-size: 2.1rem;
+        }
+        .hero {
+            padding-inline: 6%;
+        }
+        section {
+            padding-inline: 6%;
+        }
+    }
+
+    /* ================= SCROLL REVEAL (simple fade) ================= */
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="logo">Jean <span>Regis</span> • Cyber</div>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#game">Game</a>
+        <a href="#booking">Book Meeting</a>
+        <a href="#contact">Contact</a>
+        <button class="btn-cv" onclick="window.open('CV_Jean_Regis_Mukiza.pdf','_blank')">
+            Download CV
+        </button>
+    </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <!-- Parallax circles -->
+    <div class="parallax-circle circle-1" data-speed="0.1"></div>
+    <div class="parallax-circle circle-2" data-speed="0.18"></div>
+    <div class="parallax-circle circle-3" data-speed="0.12"></div>
+
+    <div class="hero-text reveal">
+        <h1>Hello, I'm <span class="hero-highlight">Jean Francois Regis MUKIZA</span></h1>
+        <div class="hero-subtitle">Cybersecurity & Digital Forensics Student • GitHub: <strong>Jean-Regis-M</strong></div>
+        <div class="typing" id="typing"></div>
+
+        <p class="hero-description">
+            I design security tools, analyze digital evidence, and build research-backed frameworks that
+            sit at the intersection of cybersecurity, digital forensics, and software engineering.  
+            My goal: turn complex threats into structured, explainable, and actionable defense strategies.
+        </p>
+
+        <div class="hero-actions">
+            <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+                <i class="fa-solid fa-shield-halved"></i> View Security Projects
+            </button>
+            <a href="https://github.com/Jean-Regis-M" class="hero-secondary-link" target="_blank">
+                <i class="fa-brands fa-github"></i> See my GitHub activity
+            </a>
+        </div>
+    </div>
+
+    <!-- Terminal box -->
+    <div class="terminal reveal">
+        <div class="terminal-header">
+            <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <span>forensics@blue-agent: ~/portfolio</span>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+            <!-- Lines will be typed here -->
+        </div>
+    </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="reveal">
+    <div class="section-title">
+        <h2>About Me</h2>
+        <p>Cybersecurity & Digital Forensics • Türkiye | Rwanda</p>
+    </div>
+    <p style="max-width:840px; margin:0 auto 20px; text-align:center; font-size:0.93rem; color:#d0d0d0;">
+        I am an undergraduate student in Computer Forensics / Cybersecurity, focused on building practical
+        tools that solve real problems: password security, phishing awareness, digital evidence workflows, and
+        AI-supported forensics models. I enjoy designing clean architectures, writing research papers,
+        and turning theory into working prototypes. My long-term vision is to contribute to digital safety
+        in both Rwanda and Türkiye through education, tools, and research.
+    </p>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="reveal">
+    <div class="section-title">
+        <h2>Skills Snapshot</h2>
+        <p>Hover over each card to flip for more details.</p>
+    </div>
+
+    <div class="flip-container">
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <div class="flip-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="flip-title">Cybersecurity</div>
+                    <div class="flip-text">Defensive & offensive basics, SOC mindset.</div>
+                </div>
+                <div class="flip-back">
+                    Network security, password hardening, basic penetration testing,
+                    secure configuration, and automation of simple security checks.
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <div class="flip-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="flip-title">Digital Forensics</div>
+                    <div class="flip-text">Evidence, logs, and structured analysis.</div>
+                </div>
+                <div class="flip-back">
+                    Log and artifact analysis, hashing, timeline reconstruction,
+                    basic OSINT, and structured reporting for DFIR workflows.
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <div class="flip-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="flip-title">Programming</div>
+                    <div class="flip-text">Python • C++ • Bash • HTML/CSS.</div>
+                </div>
+                <div class="flip-back">
+                    Building CLI tools, scripts for automation, small web apps,
+                    simple CI/CD, and Git/GitHub-based workflows for projects.
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <div class="flip-icon"><i class="fa-solid fa-brain"></i></div>
+                    <div class="flip-title">Research & Writing</div>
+                    <div class="flip-text">Cybersecurity & DF frameworks.</div>
+                </div>
+                <div class="flip-back">
+                    Academic-style writing in LaTeX, drafting models like layered DF architectures,
+                    literature review, and preparing manuscripts for platforms like arXiv.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PROJECTS (SLIDER) ================= -->
+<section id="projects" class="reveal">
+    <div class="section-title">
+        <h2>Highlighted Projects</h2>
+        <p>Selected work to showcase security, forensics, and software skills.</p>
+    </div>
+
+    <div class="slider-wrapper">
+        <div class="slider">
+            <div class="slides" id="slides">
+                <!-- Slide 1 -->
+                <div class="slide">
+                    <span class="project-tag">Cybersecurity • Python & C++</span>
+                    <h3>Advanced Password Strength & Hashing Toolkit</h3>
+                    <p>
+                        A multi-language toolkit (Python + C++) that evaluates password strength,
+                        offers strong password generation, and hashes credentials securely.
+                    </p>
+                    <p class="project-meta">
+                        Features: entropy checks, blacklist detection, hashing (SHA-256/Argon2-style design),
+                        CLI interface, GitHub Actions CI, CMake for C++, and Python packaging.
+                    </p>
+                    <a href="https://github.com/Jean-Regis-M" target="_blank">
+                        View repository on GitHub →
+                    </a>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <span class="project-tag">Digital Forensics • DFIR</span>
+                    <h3>Blue Agent: Digital Forensics Evidence Workflow</h3>
+                    <p>
+                        A conceptual and practical project that structures how evidence is collected,
+                        processed, stored, and validated using layered DF models.
+                    </p>
+                    <p class="project-meta">
+                        Includes: Python tools for hashing, log parsing, chain-of-custody metadata,
+                        and LaTeX diagrams describing the Blue/Red Agent architectures.
+                    </p>
+                    <a href="https://github.com/Jean-Regis-M" target="_blank">
+                        Explore DF tooling & diagrams →
+                    </a>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <span class="project-tag">Awareness • Web</span>
+                    <h3>Phishing Awareness & Simulation Platform</h3>
+                    <p>
+                        A web-based simulation that sends sample phishing templates, tracks clicks,
+                        and transforms the results into human-readable security reports.
+                    </p>
+                    <p class="project-meta">
+                        Focus: email templates, fake landing pages, basic analytics,
+                        and educational content for non-technical users.
+                    </p>
+                    <a href="https://github.com/Jean-Regis-M" target="_blank">
+                        See awareness & training code →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-controls">
+            <button class="slider-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="slider-indicators" id="indicators">
+                <!-- Dots inserted by JS -->
+            </div>
+            <button class="slider-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- ================= RESEARCH ================= -->
+<section id="research" class="reveal">
+    <div class="section-title">
+        <h2>Research Directions</h2>
+        <p>Blending cybersecurity, digital forensics, and real-world impact.</p>
+    </div>
+
+    <div class="research-grid">
+        <div class="research-card">
+            <span class="research-label">Digital Forensics</span>
+            <h3>AI-Assisted Evidence Interpretation</h3>
+            <p>
+                Exploring how AI can assist investigators without replacing human judgment:
+                summarizing logs, clustering artifacts, and highlighting suspicious patterns,
+                while respecting chain-of-custody and explainability.
+            </p>
+        </div>
+
+        <div class="research-card">
+            <span class="research-label">Cybersecurity & Policy</span>
+            <h3>Secure Infrastructures for Emerging Economies</h3>
+            <p>
+                Studying how Rwanda and Türkiye can strengthen cybersecurity for critical services
+                (health, education, finance) with affordable tools, training, and open-source solutions.
+            </p>
+        </div>
+
+        <div class="research-card">
+            <span class="research-label">Education</span>
+            <h3>Hands-on Security Learning Platforms</h3>
+            <p>
+                Designing beginner-friendly CTF-style projects and guided labs so students can
+                practice password cracking, log analysis, and DFIR tasks in a safe environment.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= MINI GAME ================= -->
+<section id="game" class="reveal">
+    <div class="section-title">
+        <h2>Cyber Shield Mini-Game ⚡</h2>
+        <p>Catch as many shields as you can in 20 seconds!</p>
+    </div>
+
+    <div id="game-area"
+        style="
+            width: 100%;
+            max-width: 500px;
+            height: 350px;
+            margin: 0 auto;
+            background: rgba(15, 98, 254, 0.1);
+            border: 2px solid #0f62fe;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        ">
+        <div id="shield"
+            style="
+                width: 40px;
+                height: 40px;
+                background: #0f62fe;
+                border-radius: 50%;
+                position: absolute;
+                cursor: pointer;
+                transition: 0.1s;
+            ">
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <button class="btn-primary" onclick="startGame()">Start Game</button>
+        <p id="score-display" style="margin-top: 12px; font-size: 1rem; color: #b9c0ff;">
+            Score: 0 | Time: 20s
+        </p>
+    </div>
+</section>
+
+<!-- ================= BOOK A MEETING ================= -->
+<section id="booking" class="reveal">
+    <div class="section-title">
+        <h2>Book a Google Meeting With Me 📅</h2>
+        <p>Select a date & time — you'll be redirected to Google Calendar to finalize the booking.</p>
+    </div>
+
+    <div style="
+        max-width: 480px; 
+        margin: 0 auto; 
+        background: rgba(8,10,26,0.9); 
+        padding: 20px; 
+        border-radius: 15px;
+        border: 1px solid rgba(255,255,255,0.06);
+    ">
+
+        <label style="font-size: 0.9rem;">Your Email:</label>
+        <input id="visitorEmail" type="email" placeholder="you@example.com" required
+            style="width:100%; padding:10px; border-radius:10px; margin-bottom:12px; border:none;">
+
+        <label style="font-size: 0.9rem;">Choose Date:</label>
+        <input id="meetingDate" type="date" required
+            style="width:100%; padding:10px; border-radius:10px; margin-bottom:12px; border:none;">
+
+        <label style="font-size: 0.9rem;">Choose Time:</label>
+        <input id="meetingTime" type="time" required
+            style="width:100%; padding:10px; border-radius:10px; margin-bottom:20px; border:none;">
+
+        <button class="btn-primary" style="width:100%;" onclick="bookMeeting()">
+            <i class="fa-solid fa-calendar-check"></i> Book Google Meeting
+        </button>
+    </div>
+</section>
+
+<!-- ================= CONTACT (SPAM PROTECTED) ================= -->
+<section id="contact" class="reveal">
+  <div class="section-title">
+      <h2>Contact & Links</h2>
+      <p>Secure anti-spam contact system.</p>
+  </div>
+
+  <div class="contact-container">
+      <div class="contact-row">
+
+          <!-- LEFT SIDE -->
+          <div>
+              <p class="contact-text">
+                  Feel free to reach out for collaboration, cybersecurity research,
+                  mentorship, or project discussions.  
+                  This contact system includes **anti-spam protection**.
+              </p>
+
+              <!-- SPAM HONEYPOT (hidden from humans) -->
+              <input type="text" id="honeypot" style="display:none;" autocomplete="off">
+
+              <!-- HUMAN CHALLENGE -->
+              <div id="verify-box" 
+                  style="background:#0a0c21; padding:12px; border-radius:10px; margin:15px 0; border:1px solid rgba(255,255,255,0.1);">
+                  <p style="font-size:0.85rem; color:#aaa; margin-bottom:6px;">
+                      Click the box below to verify you are human:
+                  </p>
+                  <button id="verify-btn"
+                      style="padding:10px; width:100%; border-radius:10px; border:1px solid #0f62fe; background:transparent; color:#fff;">
+                      <i class="fa-solid fa-shield"></i> I am not a robot
+                  </button>
+              </div>
+
+              <!-- Email Button (Hidden until verified) -->
+              <button id="show-email-btn" class="btn-primary" style="width:100%; display:none;">
+                  <i class="fa-solid fa-envelope"></i> Reveal Email & Send Message
+              </button>
+
+              <!-- Email Display (Hidden) -->
+              <p id="real-email" style="display:none; margin-top:10px; font-size:0.9rem;">
+                  Email: <span style="color:#71a6ff;" id="email-link"></span>
+              </p>
+
+              <!-- Social Links -->
+              <div class="contact-socials">
+                  <a href="https://github.com/Jean-Regis-M" target="_blank"><i class="fa-brands fa-github"></i></a>
+                  <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <div style="text-align:center;">
+              <p style="font-size:0.9rem; margin-bottom:10px; color:#b9c0ff;">
+                  Need a custom security tool or digital forensics research contribution?
+              </p>
+
+              <!-- Button also protected -->
+              <button class="btn-primary" id="email-btn-protected" style="display:none;">
+                  <i class="fa-solid fa-paper-plane"></i> Email Me Securely
+              </button>
+
+              <p style="font-size:0.8rem; margin-top:10px; color:#9fa6c6;">
+                  Expected response: within 24–48 hours.
+              </p>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+    // ========== Typing Effect ==========
+    const typingElement = document.getElementById("typing");
+    const typingTexts = [
+        "Building practical cybersecurity & digital forensics tools.",
+        "Turning complex threats into structured defense strategies.",
+        "Combining research, code, and real-world impact.",
+        "Learning, shipping projects, and sharing knowledge."
+    ];
+    let typingIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function typeLoop() {
+        const currentText = typingTexts[typingIndex];
+
+        if (!deleting) {
+            typingElement.textContent = currentText.slice(0, ++charIndex);
+            if (charIndex === currentText.length) {
+                deleting = true;
+                setTimeout(typeLoop, 1600);
+                return;
+            }
+        } else {
+            typingElement.textContent = currentText.slice(0, --charIndex);
+            if (charIndex === 0) {
+                deleting = false;
+                typingIndex = (typingIndex + 1) % typingTexts.length;
+            }
+        }
+        setTimeout(typeLoop, deleting ? 40 : 70);
+    }
+    typeLoop();
+
+    // ========== Terminal Typing ==========
+    const terminalBody = document.getElementById("terminal-body");
+
+    const terminalLines = [
+        { type: "command", text: "whoami" },
+        { type: "output", text: "Jean-Regis-M   # Cybersecurity & Digital Forensics student" },
+        { type: "command", text: "ls skills/" },
+        { type: "output", text: "python  c++  linux  digital-forensics  research  git" },
+        { type: "command", text: "cat mission.txt" },
+        { type: "output", text: "Build tools • publish research • protect systems • empower communities." }
+    ];
+
+    let termLineIndex = 0;
+    let termCharIndex = 0;
+    let currentSpan = null;
+
+    function createTerminalLine(prefix) {
+        const line = document.createElement("span");
+        line.className = "terminal-line";
+        line.innerHTML = prefix;
+        terminalBody.appendChild(line);
+        return line;
+    }
+
+    function terminalLoop() {
+        if (termLineIndex >= terminalLines.length) {
+            // add final prompt with blinking cursor
+            const finalLine = document.createElement("span");
+            finalLine.className = "terminal-line";
+            finalLine.innerHTML = '<span class="prompt">forensics@blue-agent:~$</span><span class="terminal-cursor"></span>';
+            terminalBody.appendChild(finalLine);
+            return;
+        }
+
+        const { type, text } = terminalLines[termLineIndex];
+
+        if (termCharIndex === 0) {
+            const prefix = type === "command"
+                ? '<span class="prompt">forensics@blue-agent:~$</span> '
+                : '&nbsp;&nbsp;&nbsp;';
+            currentSpan = createTerminalLine(prefix);
+        }
+
+        const visible = text.slice(0, ++termCharIndex);
+        currentSpan.innerHTML = currentSpan.innerHTML.split(/<\/span> ?/)[0] + '</span> ' + visible;
+
+        terminalBody.scrollTop = terminalBody.scrollHeight;
+
+        if (termCharIndex === text.length) {
+            termLineIndex++;
+            termCharIndex = 0;
+            setTimeout(terminalLoop, type === "command" ? 350 : 700);
+        } else {
+            setTimeout(terminalLoop, 30);
+        }
+    }
+
+    setTimeout(terminalLoop, 800);
+
+    // ========== Project Slider ==========
+    const slidesContainer = document.getElementById("slides");
+    const slideElements = document.querySelectorAll(".slide");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const indicatorsContainer = document.getElementById("indicators");
+
+    let currentSlide = 0;
+    const totalSlides = slideElements.length;
+
+    // Create indicator dots
+    const indicators = [];
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement("div");
+        dot.className = "indicator-dot" + (i === 0 ? " active" : "");
+        dot.addEventListener("click", () => goToSlide(i));
+        indicatorsContainer.appendChild(dot);
+        indicators.push(dot);
+    }
+
+    function updateSlider() {
+        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        indicators.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentSlide);
+        });
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+    }
+
+    prevBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    });
+
+    // Auto-slide every 10s
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    }, 10000);
+
+    // ========== Parallax ==========
+    const parallaxEls = document.querySelectorAll("[data-speed]");
+
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY || window.pageYOffset;
+        parallaxEls.forEach(el => {
+            const speed = parseFloat(el.getAttribute("data-speed"));
+            el.style.transform = `translateY(${scrollY * speed}px)`;
+        });
+    });
+
+    // ========== Scroll Reveal ==========
+    const revealEls = document.querySelectorAll(".reveal");
+
+    function handleReveal() {
+        const triggerBottom = window.innerHeight * 0.85;
+        revealEls.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < triggerBottom) {
+                el.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", handleReveal);
+    window.addEventListener("load", handleReveal);
+
+    // ========== SIMPLE GAME LOGIC ==========
+    let score = 0;
+    let timeLeft = 20;
+    let gameRunning = false;
+
+    const shield = document.getElementById("shield");
+    const gameArea = document.getElementById("game-area");
+    const scoreDisplay = document.getElementById("score-display");
+
+    function randomPosition() {
+        const maxX = gameArea.clientWidth - 40;
+        const maxY = gameArea.clientHeight - 40;
+
+        const randX = Math.random() * maxX;
+        const randY = Math.random() * maxY;
+
+        shield.style.left = randX + "px";
+        shield.style.top = randY + "px";
+    }
+
+    shield.addEventListener("click", () => {
+        if (!gameRunning) return;
+        score++;
+        randomPosition();
+        scoreDisplay.textContent = `Score: ${score} | Time: ${timeLeft}s`;
+    });
+
+    function startGame() {
+        score = 0;
+        timeLeft = 20;
+        gameRunning = true;
+        scoreDisplay.textContent = `Score: ${score} | Time: ${timeLeft}s`;
+        randomPosition();
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            scoreDisplay.textContent = `Score: ${score} | Time: ${timeLeft}s`;
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                gameRunning = false;
+                scoreDisplay.textContent = `Time’s up! Final Score: ${score}`;
+            }
+        }, 1000);
+    }
+
+    // expose startGame globally
+    window.startGame = startGame;
+
+    // ========== GOOGLE CALENDAR BOOKING ==========
+    function bookMeeting() {
+        const email = document.getElementById("visitorEmail").value;
+        const date = document.getElementById("meetingDate").value;
+        const time = document.getElementById("meetingTime").value;
+
+        if (!email || !date || !time) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        const start = new Date(`${date}T${time}:00`);
+        const end = new Date(start.getTime() + 30 * 60000); // 30-minute meeting
+
+        function formatDate(dt) {
+            return dt.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+        }
+
+        const startStr = formatDate(start);
+        const endStr = formatDate(end);
+
+        const myEmail = "mukizaregis@gmail.com";  // Your email
+
+        const url =
+            `https://calendar.google.com/calendar/render?action=TEMPLATE` +
+            `&text=Meeting+with+Jean+Regis` +
+            `&dates=${startStr}/${endStr}` +
+            `&add=${myEmail}` +
+            `&details=Visitor:+${encodeURIComponent(email)}%0AReason:+Portfolio+Meeting` +
+            `&location=Google+Meet`;
+
+        window.open(url, "_blank");
+    }
+
+    window.bookMeeting = bookMeeting;
+</script>
+
+
+<script>
+// ====== Anti-Spam Email Protection ======
+
+// Encoded email (bots cannot decode this)
+const encodedEmail = "bXVraXphcmVnaXNAZ21haWwuY29t"; // Base64 version of your email
+
+function decodeEmail(encoded) {
+    return atob(encoded);
+}
+
+// Human verification system
+const verifyBtn = document.getElementById("verify-btn");
+const showEmailBtn = document.getElementById("show-email-btn");
+const emailBtnProtected = document.getElementById("email-btn-protected");
+const realEmail = document.getElementById("real-email");
+const emailLink = document.getElementById("email-link");
+const honeypot = document.getElementById("honeypot");
+
+let verified = false;
+let rateLimit = false;
+
+// Anti-spam: rate-limit clicks
+function blockTemporarily() {
+    rateLimit = true;
+    setTimeout(() => { rateLimit = false; }, 3000);
+}
+
+verifyBtn.addEventListener("click", () => {
+    if (honeypot.value !== "") return; // bot detected
+
+    if (rateLimit) return;
+    blockTemporarily();
+
+    verified = true;
+
+    verifyBtn.innerHTML = "<i class='fa-solid fa-check'></i> Verified!";
+    verifyBtn.style.background = "#0f62fe";
+    verifyBtn.style.borderColor = "#0f62fe";
+    verifyBtn.style.cursor = "default";
+
+    // Show real email button
+    showEmailBtn.style.display = "block";
+    emailBtnProtected.style.display = "block";
+
+});
+
+// Reveal email safely
+showEmailBtn.addEventListener("click", () => {
+    if (!verified) return;
+
+    const decoded = decodeEmail(encodedEmail);
+    emailLink.textContent = decoded;
+    emailLink.href = "mailto:" + decoded;
+
+    realEmail.style.display = "block";
+});
+
+// Secure email send button
+emailBtnProtected.addEventListener("click", () => {
+    if (!verified) return;
+
+    const decoded = decodeEmail(encodedEmail);
+    window.location.href = "mailto:" + decoded + "?subject=Portfolio%20Inquiry";
+});
+</script>
+
+</body>
+</html>
+="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
 <body>
     <header>
@@ -119,3 +1486,4 @@
 </body>
 
 </html>
+
