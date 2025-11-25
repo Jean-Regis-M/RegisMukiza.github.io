@@ -10,7 +10,7 @@ It serves as both my **portfolio** and a space to share my journey in tech.
 
 You can view the live website here:  
 
-👉 [[HERE WE GO ](https://jean-regis-m.github.io/RegisMukiza.github.io/index.html))
+👉 [[HERE WE GO ]( https://jean-regis-m.github.io/My_Portfolio/))
 
 ---
 
